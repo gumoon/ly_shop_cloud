@@ -1,21 +1,12 @@
-/**index.wxss**/
-.userinfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.weui-footer{
+    margin-bottom: 50px;
 }
-
-.userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
-  margin: 20rpx;
-  border-radius: 50%;
+.weui-footer_fixed-bottom{
+    margin-bottom: 0;
 }
-
-.userinfo-nickname {
-  color: #aaa;
+.page__hd {
+    padding:10px 15px;
 }
-
-.usermotto {
-  margin-top: 200px;
+image {
+  width: 100%;
 }

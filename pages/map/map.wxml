@@ -1,0 +1,4 @@
+<!--map.wxml-->
+<view class="page">
+<map id="map" longitude="113.606630" latitude="28.155540" scale="18" markers="{{markers}}" bindmarkertap="markertap" show-location style="width: 100%; height: 300px;"></map>
+</view>
