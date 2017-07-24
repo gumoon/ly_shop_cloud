@@ -1,70 +1,72 @@
 <!--index.wxml-->
 <view class="page">
-<view class="page__hd">
-        <swiper indicator-dots="{{indicatorDots}}"
-  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src="{{item}}" class="slide-image" height="150"/>
-    </swiper-item>
-  </block>
-</swiper>
-</view>
-<view class="page__bd page__bd_spacing">
-    
-    
+  <view class="page__hd">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{imgUrls}}" wx:key="*this">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" height="150" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="page__bd page__bd_spacing">
     <view class="weui-panel">
       <view class="weui-panel__hd">基本信息</view>
       <view class="weui-panel__bd">
-          <view class="weui-media-box weui-media-box_small-appmsg">
-                    <view class="weui-cells weui-cells_in-small-appmsg">
-                    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="/resources/店铺.png" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>金狮广告策划工作室</view>
-                            </view>
-                        </navigator>
-                    <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="/resources/我的.png" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>王总</view>
-                            </view>
-                        </navigator>
-                        <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="/resources/电话.png" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view bindtap="callOwner">13548667520</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                        <navigator url="/pages/map/map" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
-                            <view class="weui-cell__hd"><image src="/resources/目的地.png" style="width: 20px;height: 20px;margin-right: 5px" /></view>
-                            <view class="weui-cell__bd weui-cell_primary">
-                                <view>浏阳市金沙北路728号嘉信新城</view>
-                            </view>
-                            <view class="weui-cell__ft weui-cell__ft_in-access"></view>
-                        </navigator>
-                    </view>
-                </view>
+        <view class="weui-media-box weui-media-box_small-appmsg">
+          <view class="weui-cells weui-cells_in-small-appmsg">
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                <image src="/resources/店铺.png" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view>{{s_name}}</view>
+              </view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                <image src="/resources/我的.png" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view>{{s_owner}}</view>
+              </view>
+            </navigator>
+            <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                <image src="/resources/电话.png" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view bindtap="callOwner">{{s_tel}}</view>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+            <navigator url="/pages/map/map" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
+              <view class="weui-cell__hd">
+                <image src="/resources/目的地.png" style="width: 20px;height: 20px;margin-right: 5px" />
+              </view>
+              <view class="weui-cell__bd weui-cell_primary">
+                <view>{{s_addr}}</view>
+              </view>
+              <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </navigator>
+          </view>
+        </view>
       </view>
     </view>
-
-      <view class="weui-panel weui-panel_access">
-            <view class="weui-panel__hd">详细信息</view>
-            <view class="weui-panel__bd">
-                <view class="weui-media-box weui-media-box_text">
-                    <view class="weui-media-box__title weui-media-box__title_in-text">简介</view>
-                    <view class="weui-media-box__desc">15年广告行业经验，为浏阳本地企业提供最专业，最优惠的价格。
-欢迎光临！</view>
+    <view class="weui-panel weui-panel_access">
+      <view class="weui-panel__hd">详细信息</view>
+      <view class="weui-panel__bd">
+        <view class="weui-media-box weui-media-box_text">
+          <view class="weui-media-box__title weui-media-box__title_in-text">简介</view>
+          <view class="weui-media-box__desc">{{s_intro}}</view>
         </view>
       </view>
+    </view>
+    <view class="weui-footer weui-footer_fixed-bottom">
+      <view class="weui-footer__links">
+        <text class="weui-footer__link">大师兄广告连锁浏阳店</text>
+      </view>
+      <view class="weui-footer__text">Copyright © 2003-2017</view>
+    </view>
   </view>
-        <view class="weui-footer weui-footer_fixed-bottom">
-            <view class="weui-footer__links">
-                <text class="weui-footer__link">金狮广告策划工作室</text>
-            </view>
-            <view class="weui-footer__text">Copyright © 2003-2017</view>
-        </view>
-    </view> 
-  
 </view>

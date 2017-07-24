@@ -1,0 +1,13 @@
+<!--itemList.wxml-->
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-grids">
+            <block wx:for="{{grids}}" wx:key="*this">
+                <navigator url="/pages/itemDetail/itemDetail" class="weui-grid" hover-class="weui-grid_active">
+                    <image class="weui-grid__icon" src="http://oskpmz186.bkt.clouddn.com/WechatIMG293.jpeg" />
+                    <view class="weui-grid__label">Grid</view>
+                </navigator>
+            </block>
+        </view>
+    </view>
+</view>

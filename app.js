@@ -5,5 +5,6 @@ App({
     console.log(options)
   },
   globalData:{
+    baseUrl: 'https://wx.free-abc.com.cn'
   }
 })

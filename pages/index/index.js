@@ -3,29 +3,48 @@
 var app = getApp()
 Page({
   data: {
-    src: "http://img3.imgtn.bdimg.com/it/u=1262844727,1897845955&fm=214&gp=0.jpg",
     imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG293.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG296.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG295.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG297.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG294.jpeg'
     ],
     indicatorDots: true,
     autoplay: true,
     interval: 5000,
-    duration: 1000
+    duration: 1000,
+    s_name: ''
   },
   onLoad: function () {
-    console.log('onLoad');
-    wx.setNavigationBarTitle({
-      title: '浏阳云商汇',
+    const self = this
+    wx.request({
+      url: app.globalData.baseUrl + '/admin/index/test',
+      method: 'GET',
+      success: function (res) {
+        console.log(res)
+        self.setData({
+          s_name: res.data.data.s_name,
+          s_owner: res.data.data.s_owner,
+          s_tel: res.data.data.s_tel,
+          s_addr: res.data.data.s_addr,
+          s_intro: res.data.data.s_intro
+        })
+      },
+      fail: function (res) {
+        console.log(res)
+      }
     })
+  },
+  onShow: function() {
+
   },
   markertap(e) {
     console.log(e)
   },
   onShareAppMessage: function(res) {
     return {
-      title: '浏阳金狮广告欢迎您',
+      title: this.data.s_name+'欢迎您',
       path: 'pages/index/index',
       success: function(res) {
         console.log(res)

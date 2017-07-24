@@ -1,13 +1,32 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/map/map"
+    "pages/map/map",
+    "pages/itemList/itemList",
+    "pages/itemDetail/itemDetail"
   ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "大师兄广告连锁浏阳店",
     "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/resources/index.png",
+        "selectedIconPath": "resources/index-selected.png"
+      },
+      {
+        "pagePath": "pages/itemList/itemList",
+        "text": "产品",
+        "iconPath": "/resources/product.png",
+        "selectedIconPath": "/resources/product-selected.png"
+      }
+    ],
+    "position": "bottom"
   },
   "debug": true
 }
