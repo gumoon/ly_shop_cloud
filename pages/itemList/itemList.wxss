@@ -1,14 +1,13 @@
 /* itemList.wxss */
-.weui-grid {
-  width: 100%;
-  height: 200px;
+image {
+  width:335rpx;
+  height: 300rpx;
 }
 
-.weui-grid__icon { 
-  width: 100%;
-  height: 150px;
+navigator {
+  margin: 20rpx;
 }
 
-.weui-grid__label {
-  text-align: left;
+.il_nav {
+  float: left;
 }

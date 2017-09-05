@@ -1,11 +1,24 @@
 // itemDetail.js
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    imgUrls: [
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG293.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG296.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG295.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG297.jpeg',
+      'http://oskpmz186.bkt.clouddn.com/WechatIMG294.jpeg'
+    ],
+    indicatorDots: true,
+    autoplay: true,
+    interval: 5000,
+    duration: 1000,
+    s_name: '',
+    pContentImages: [{
+      src: 'http://oskpmz186.bkt.clouddn.com/WechatIMG294.jpeg'
+    },
+    {
+      src: 'http://oskpmz186.bkt.clouddn.com/WechatIMG297.jpeg'
+    }]
   },
 
   /**

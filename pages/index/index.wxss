@@ -1,13 +1,30 @@
 .weui-footer{
-    margin-bottom: 50px;
+    margin-top: 10rpx;
 }
 .weui-footer_fixed-bottom{
     margin-bottom: 0;
 }
 .page__hd {
-    padding:10px 15px;
+    padding:10rpx 15rpx;
 }
 image {
   width: 100%;
-  height: 150px;
+  height: 300rpx;
+}
+
+.weui-grids {
+  border: none;
+  background-color: white;
+}
+.weui-grid {
+  width: 20%;
+  padding: 20rpx 10rpx;
+  border: none;
+}
+
+.weui-media-box__desc {
+  display: inline;
+  font-size: normal;
+  color: black;
+  font-style: normal;
 }

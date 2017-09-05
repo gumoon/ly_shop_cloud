@@ -1,7 +1,33 @@
 /* itemDetail.wxss */
-page{
-    background-color: #FFFFFF;
+.page__hd {
+    padding:10rpx 15rpx;
 }
-image{
-    margin: 4px 0;
+image {
+  width: 100%;
+  height: 100%;
+}
+swiper {
+  height: 600rpx;
+}
+
+.product_title {
+  font-size: large;
+}
+
+.p_content {
+  margin: 20rpx;
+}
+
+.p_content_title {
+  font-size: large;
+  padding-bottom: 20rpx;
+  color: grey;
+}
+.p_content_image {
+  height: 1000rpx;
+}
+
+.contact {
+  position: bottom;
+  
 }

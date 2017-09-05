@@ -1,4 +1,5 @@
 <!--index.wxml-->
+<import src="../../utils/wxParse/wxParse.wxml" />
 <view class="page">
   <view class="page__hd">
     <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
@@ -10,8 +11,16 @@
     </swiper>
   </view>
   <view class="page__bd page__bd_spacing">
+    <view class="weui-grids">
+      <block wx:for="{{grids}}" wx:key="title">
+          <navigator url="/pages/itemDetail/itemDetail" open-type="navigate" class="weui-grid" hover-class="weui-grid_active">
+              <image class="weui-grid__icon" src="{{item.logo}}" />
+              <view class="weui-grid__label">{{item.title}}</view>
+          </navigator>
+      </block>
+    </view>
     <view class="weui-panel">
-      <view class="weui-panel__hd">基本信息</view>
+      <view class="weui-panel__hd">联系信息</view>
       <view class="weui-panel__bd">
         <view class="weui-media-box weui-media-box_small-appmsg">
           <view class="weui-cells weui-cells_in-small-appmsg">
@@ -54,18 +63,16 @@
       </view>
     </view>
     <view class="weui-panel weui-panel_access">
-      <view class="weui-panel__hd">详细信息</view>
+      <view class="weui-panel__hd">公司介绍</view>
       <view class="weui-panel__bd">
         <view class="weui-media-box weui-media-box_text">
-          <view class="weui-media-box__title weui-media-box__title_in-text">简介</view>
-          <view class="weui-media-box__desc">{{s_intro}}</view>
+          <view class="weui-media-box__desc">
+            <template is="wxParse" data="{{wxParseData:intro.nodes}}" />
+          </view>
         </view>
       </view>
     </view>
-    <view class="weui-footer weui-footer_fixed-bottom">
-      <view class="weui-footer__links">
-        <text class="weui-footer__link">大师兄广告连锁浏阳店</text>
-      </view>
+    <view class="weui-footer weui-footer-bottom">
       <view class="weui-footer__text">Copyright © 2003-2017</view>
     </view>
   </view>

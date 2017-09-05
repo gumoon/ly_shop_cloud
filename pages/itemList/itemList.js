@@ -5,7 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-    grids: [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    grids: [{
+      title: "1111",
+      pic_url: "http://oskpmz186.bkt.clouddn.com/WechatIMG293.jpeg"
+    },
+    {
+      title: "2222",
+      pic_url: "http://oskpmz186.bkt.clouddn.com/WechatIMG296.jpeg"
+      },
+      {
+        title: "3333",
+        pic_url: "http://oskpmz186.bkt.clouddn.com/WechatIMG296.jpeg"
+    }, 
+    {
+      title: "4444",
+      pic_url: "http://oskpmz186.bkt.clouddn.com/WechatIMG293.jpeg"
+    },
+    {
+      title: "5555",
+      pic_url: "http://oskpmz186.bkt.clouddn.com/WechatIMG296.jpeg"
+    },
+    {
+      title: "6666",
+      pic_url: "http://oskpmz186.bkt.clouddn.com/WechatIMG296.jpeg"
+    }]
   },
 
   /**
@@ -47,14 +70,36 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-
+    console.log('下拉');
+    setTimeout(function () {
+      wx.stopPullDownRefresh();
+    }, 2000)
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
+    wx.showLoading({
+      title: '加载中',
+      mask: true,
+      success: function(){
+        console.log('loading success');
+      }
+    });
+    var newarray = [{
+      title: "xxxx",
+      pic_url: "http://oskpmz186.bkt.clouddn.com/WechatIMG294.jpeg"
+    }];
 
+    this.setData({
+      grids: this.data.grids.concat(newarray)
+    });
+    console.log('onReachBottom');
+    setTimeout(function(){
+      wx.hideLoading();
+    }, 2000)
+    // 
   },
 
   /**
