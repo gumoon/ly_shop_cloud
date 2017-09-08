@@ -19,50 +19,69 @@ Page({
     s_name: '',
     grids: [{
       title: "灯箱",
-      logo: "/resources/icon/灯箱.png"
+      logo: "/resources/icon/灯箱.png",
+      src: "/pages/itemList/itemList?cat_id=1",
+      cat_id: 1
     },
     {
       title: "字",
-      logo: "/resources/icon/字.png"
+      logo: "/resources/icon/字.png",
+      src: "/pages/itemList/itemList?cat_id=2",
+      cat_id: 2
     },
     {
       title: "标牌",
       logo: "/resources/icon/标牌.png",
-      url: ""
+      src: "/pages/itemList/itemList?cat_id=3",
+      cat_id: 3
     },
     {
       title: "喷画",
-      logo: "/resources/icon/喷画.png"
+      logo: "/resources/icon/喷画.png",
+      src: "/pages/itemList/itemList?cat_id=4",
+      cat_id: 4
     }, 
     {
       title: "促销",
-      logo: "/resources/icon/促销.png"
+      logo: "/resources/icon/促销.png",
+      src: "/pages/itemList/itemList?cat_id=5",
+      cat_id: 5
     },
     {
       title: "展柜",
-      logo: "/resources/icon/展柜.png"
+      logo: "/resources/icon/展柜.png",
+      src: "/pages/itemList/itemList?cat_id=6",
+      cat_id: 6
     },
     {
       title: "店招",
-      logo: "/resources/icon/店招.png"
+      logo: "/resources/icon/店招.png",
+      src: "/pages/itemList/itemList?cat_id=7",
+      cat_id: 7
     },
     {
       title: "印刷",
-      logo: "/resources/icon/印刷.png"
+      logo: "/resources/icon/印刷.png",
+      src: "/pages/itemList/itemList?cat_id=8",
+      cat_id: 8
     },
     {
       title: "设计",
-      logo: "/resources/icon/设计.png"
+      logo: "/resources/icon/设计.png",
+      src: "/pages/itemList/itemList?cat_id=9",
+      cat_id: 9
     },
     {
       title: "全部",
-      logo: "/resources/icon/全部.png"
+      logo: "/resources/icon/全部.png",
+      src: "/pages/itemList/itemList?cat_id=0",
+      cat_id: 0
     }]
   },
   onLoad: function () {
     const self = this
     wx.request({
-      url: app.globalData.baseUrl + '/admin/index/test',
+      url: app.globalData.baseUrl + '/api/v1/shop/show',
       method: 'GET',
       success: function (res) {
         console.log(res)

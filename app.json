@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/map/map",
     "pages/itemList/itemList",
-    "pages/itemDetail/itemDetail"
+    "pages/itemDetail/itemDetail",
+    "pages/all/all"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -15,12 +16,12 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "大师兄",
         "iconPath": "/resources/index.png",
         "selectedIconPath": "resources/index-selected.png"
       },
       {
-        "pagePath": "pages/itemList/itemList",
+        "pagePath": "pages/all/all",
         "text": "产品",
         "iconPath": "/resources/product.png",
         "selectedIconPath": "/resources/product-selected.png"

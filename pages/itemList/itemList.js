@@ -1,6 +1,6 @@
 // itemList.js
+var app = getApp()
 Page({
-
   /**
    * 页面的初始数据
    */
@@ -35,7 +35,25 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
+    console.log(options.cat_id);
+    var aI = 1;
+    if ('undefined' !== typeof options.cat_id) {
+      aI = options.cat_id;
+    }
 
+    wx.request({
+      url: app.globalData.baseUrl + '/api/v1/shop/listByCatId',
+      method: 'GET',
+      success: function (res) {
+        console.log(res)
+        that.setData({
+        });
+      },
+      fail: function (res) {
+        console.log(res)
+      }
+    })
   },
 
   /**

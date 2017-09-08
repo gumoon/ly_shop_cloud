@@ -13,7 +13,7 @@
   <view class="page__bd page__bd_spacing">
     <view class="weui-grids">
       <block wx:for="{{grids}}" wx:key="title">
-          <navigator url="/pages/itemDetail/itemDetail" open-type="navigate" class="weui-grid" hover-class="weui-grid_active">
+          <navigator url="{{item.src}}" open-type="navigate" class="weui-grid" hover-class="weui-grid_active">
               <image class="weui-grid__icon" src="{{item.logo}}" />
               <view class="weui-grid__label">{{item.title}}</view>
           </navigator>
@@ -26,7 +26,7 @@
           <view class="weui-cells weui-cells_in-small-appmsg">
             <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
               <view class="weui-cell__hd">
-                <image src="/resources/店铺.png" style="width: 20px;height: 20px;margin-right: 5px" />
+                <image src="/resources/店铺.png" class='weui-cell__icon' />
               </view>
               <view class="weui-cell__bd weui-cell_primary">
                 <view>{{s_name}}</view>
@@ -34,7 +34,7 @@
             </navigator>
             <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
               <view class="weui-cell__hd">
-                <image src="/resources/我的.png" style="width: 20px;height: 20px;margin-right: 5px" />
+                <image src="/resources/我的.png" class='weui-cell__icon' />
               </view>
               <view class="weui-cell__bd weui-cell_primary">
                 <view>{{s_owner}}</view>
@@ -42,7 +42,7 @@
             </navigator>
             <navigator url="" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
               <view class="weui-cell__hd">
-                <image src="/resources/电话.png" style="width: 20px;height: 20px;margin-right: 5px" />
+                <image src="/resources/电话.png" class='weui-cell__icon' />
               </view>
               <view class="weui-cell__bd weui-cell_primary">
                 <view bindtap="callOwner">{{s_tel}}</view>
@@ -51,7 +51,7 @@
             </navigator>
             <navigator url="/pages/map/map" class="weui-cell weui-cell_access" hover-class="weui-cell_active">
               <view class="weui-cell__hd">
-                <image src="/resources/目的地.png" style="width: 20px;height: 20px;margin-right: 5px" />
+                <image src="/resources/目的地.png" class='weui-cell__icon' />
               </view>
               <view class="weui-cell__bd weui-cell_primary">
                 <view>{{s_addr}}</view>

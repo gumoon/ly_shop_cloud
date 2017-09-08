@@ -24,7 +24,22 @@ image {
 
 .weui-media-box__desc {
   display: inline;
-  font-size: normal;
+  font-size: 14px;
   color: black;
   font-style: normal;
+}
+
+.weui-grid__icon {
+  width: 96rpx;
+  height: 96rpx;
+}
+
+.weui-cell__bd {
+  font-size: 14px;
+}
+
+.weui-cell__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 5px
 }
